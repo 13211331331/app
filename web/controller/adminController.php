@@ -10,50 +10,35 @@ class adminController extends Controller {
 	}
 	
 	public function before() {
-		echo '前置执行Action';
+		//echo '前置执行Action';
 	}
 	
 	public function after() {
-		echo '后置执行Action';
+		//echo '后置执行Action';
 	}
 	
 	
 	
-	public $initphp_list = array('test'); 
 	
 	public function run() {
 		$this->view->set_tpl('admin/run'); 
-		$this->view->display(); //模板显示
+		$this->view->display();
 	}
 	
 	
 	
+	
+	
+	/*public function produnt_list() {
+		$this->view->set_tpl('admin/produnt/list'); 
+		$this->view->display(); //模板显示
+	}*/
 	
 	
 	public function test() {
 		$this->view->set_tpl('admin/test'); 
-		$this->view->display(); //模板显示
+		$this->view->display(); 
 	}
-	
-	
-	public function test1() {
-		$this->view->set_tpl('admin/test'); 
-		$this->view->display(); //模板显示
-	}
-	public function test2() {
-		$this->view->set_tpl('admin/test'); 
-		$this->view->display(); //模板显示
-	}
-	
-	public function test_1() {
-		$this->view->set_tpl('admin/test'); 
-		$this->view->display(); //模板显示
-	}
-	public function test_2() {
-		$this->view->set_tpl('admin/test'); 
-		$this->view->display(); //模板显示
-	}
-	
 	
 
 
