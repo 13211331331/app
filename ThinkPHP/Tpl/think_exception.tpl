@@ -1,8 +1,3 @@
-<?php
-    if(C('LAYOUT_ON')) {
-        echo '{__NOLAYOUT__}';
-    }
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -10,7 +5,7 @@
 <style type="text/css">
 *{ padding: 0; margin: 0; }
 html{ overflow-y: scroll; }
-body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333;}
 img{ border: 0; }
 .error{ padding: 24px 48px; }
 .face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
