@@ -105,3 +105,126 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:0.002628s ]
 INFO: [ view_end ] --END-- [ RunTime:0.002855s ]
 
+[ 2014-11-11T23:56:34+08:00 ] 127.0.0.1 /app/index.php/login/Index.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002686s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002929s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.003170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003362s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.005658s ]
+INFO: [ view_template ] --END-- [ RunTime:0.005908s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.045097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045318s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.004003s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.002433s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002766s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012255s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.003144s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003321s ]
+
+[ 2014-11-11T23:56:35+08:00 ] 127.0.0.1 /app/index.php/login/Index.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003028s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003369s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002621s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001766s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002051s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.028392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028710s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001681s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001527s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000900s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005986s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002594s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002845s ]
+
+[ 2014-11-11T23:56:36+08:00 ] 127.0.0.1 /app/index.php/login/Index.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002711s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004182s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001926s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001428s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001607s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.018473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018676s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001211s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001309s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001084s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006886s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001861s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002021s ]
+
+[ 2014-11-11T23:56:36+08:00 ] 127.0.0.1 /app/index.php/login/Index.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002229s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002470s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001677s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002690s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002883s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.021053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021267s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001189s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001137s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000882s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004957s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001635s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001778s ]
+
+[ 2014-11-11T23:57:51+08:00 ] 127.0.0.1 /app/index.php/login/Index.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003563s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003813s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001567s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001079s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001241s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Tpl/Index/header.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory E:\eclipse\work\shop\app\ThinkPHP\Lib\Template\ThinkTemplate.class.php 第 686 行.
+NOTIC: [2] file_get_contents(./Tpl/Index/msg.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory E:\eclipse\work\shop\app\ThinkPHP\Lib\Template\ThinkTemplate.class.php 第 686 行.
+NOTIC: [8] Undefined variable: home E:\eclipse\work\shop\app\Runtime\Cache\b0592b4787e0f1b53417f2234c3fb827.php 第 14 行.
+NOTIC: [8] Undefined variable: projectName E:\eclipse\work\shop\app\Runtime\Cache\b0592b4787e0f1b53417f2234c3fb827.php 第 14 行.
+NOTIC: [8] Undefined variable: token E:\eclipse\work\shop\app\Runtime\Cache\b0592b4787e0f1b53417f2234c3fb827.php 第 42 行.
+NOTIC: [8] Undefined variable: username E:\eclipse\work\shop\app\Runtime\Cache\b0592b4787e0f1b53417f2234c3fb827.php 第 50 行.
+NOTIC: [8] Undefined variable: errors E:\eclipse\work\shop\app\Runtime\Cache\b0592b4787e0f1b53417f2234c3fb827.php 第 64 行.
+NOTIC: [8] Undefined variable: projectName E:\eclipse\work\shop\app\Runtime\Cache\b0592b4787e0f1b53417f2234c3fb827.php 第 102 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.046608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046819s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001783s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001996s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001277s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002924s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008720s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002425s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002676s ]
+
