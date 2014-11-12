@@ -1,6 +1,8 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
+	'APP_NAME'		=>	'app',
+	'__PUBLIC__'    =>  __ROOT__.'/322Public',// 站点公共目录
 //Database
 'DB_TYPE'   		=> 	'mysql', 	// 数据库类型
 'DB_HOST'   		=> 	'localhost',// 服务器地址
@@ -13,6 +15,9 @@ return array(
 'DB_RW_SEPARATE'	=>	FALSE,		// 数据库是否需要读写分离 分布式部署下有效
 'DB_MASTER_NUM'		=>	1,			// 设置读写分离后 主服务器数量	1
 'URL_CASE_INSENSITIVE'  => true, //不区分大小写 问题解决
+'TMPL_PARSE_STRING'  => array(
+     '__PUBLIC__'=>__ROOT__.'/app/Public',
+ ),
 
 );
 ?>
