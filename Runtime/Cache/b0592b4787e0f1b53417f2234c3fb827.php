@@ -1,5 +1,65 @@
 <?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="Pragma" contect="no-cache" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="content-language" content="zh-CN" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ideat ideat.org">
+    <meta name="copyright" content="© www.ideat.org" />
+    <meta name="description" content="ideat、三月软件小组 专业从事软件开发的学生团队">
+    <meta name="keywords" content="ideat、三月软件、三月软件工作室、三月软件小组、软件开发、Linux、Mysql、PHP" />
+    <meta name="description" content="ideat 页面描述" />
+    <meta name="keywords" content="ideat、页面关键字" />
+    <meta name="robots" content="index,follow,archive" />
+    <meta name="date" content="<?php echo date(DATE_ATOM); ?>" />
+    
+    <link rel='stylesheet' type='text/css' href="__PUBLIC__/include/bootstrap/css/bootstrap.min.css" />
+    <link rel='stylesheet' type='text/css' href="__PUBLIC__/include/css/style.css" />
+    <link rel='stylesheet' type='text/css' href="__PUBLIC__/include/code-prettify/prettify.css" />
+    <link rel='stylesheet' type='text/css' href="__PUBLIC__/include/bootstrap-datetimepicker/css/datepicker.css" />
+    <!--<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans' />-->
+    <link rel="stylesheet" type='text/css' href="__PUBLIC__/include/tablesorter/css/theme.bootstrap.css">
+    <link rel="stylesheet" type='text/css' href="__PUBLIC__/include/icheck/skins/flat/blue.css">
+    <link rel="stylesheet" type='text/css' href="__PUBLIC__/include/bootstrap-modal/css/bootstrap-modal.css">
 
+
+    <script type="text/javascript" src="__PUBLIC__/include/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/bootstrap/js/bootstrap-tooltip.js"></script>
+
+    <script type="text/javascript" src="__PUBLIC__/include/bootstrap-modal/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+
+    <script type="text/javascript" src="__PUBLIC__/include/icheck/jquery.icheck.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/bootstrap-datetimepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/jquery-validation/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/jquery-validation/js/jquery.metadata.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/js/messages_zh.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/jquery-validation/js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/js/jquery.prettydate.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/datatable/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/js/light-table-filter.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/tablesorter/js/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/tablesorter/js/jquery.tablesorter.widgets.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/include/js/comm.js"></script>
+    
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+</script>
+<!--[if lt IE 8]>
+  <script type="text/javascript">
+    
+  </script> 
+<![endif]-->
+</head>
 <body>
 <div class="container">
 <div class="wrapper">
@@ -17,10 +77,10 @@
                    
                 </ul>
                 <ul class="nav pull-right">
-                     <li><a id="home_link" accesskey="h" href="<?php echo U('Index/index');?>">← Back home</a></li>
+                     <li><a id="home_link" accesskey="h" href="<?php echo U('Index/index');?>">← 网站首页</a></li>
                     <li class="vr"></li>
-                    <li><a accesskey="l" href="<?php echo U('Login/index');?>">Sign in</a></li>
-                    <li><a href="<?php echo U('Login/signup');?>">Join Ideat!</a></li>
+                    <li><a accesskey="l" href="<?php echo U('Login/index');?>">登录</a></li>
+                    <li><a href="<?php echo U('Login/signup');?>">注册</a></li>
                 </ul>
                 <form class="navbar-search pull-right" action="">
                     <!--<div class="input-prepend input-pend">
@@ -33,21 +93,25 @@
         </div>
     </div>
 </div>
+
+    <br>
+    <br>
+    <br>
     <div class="row-fluid">
-        <div class="span6 border-radius6 border offset2">
+        <div class="span6 border-radius6 border offset3">
             <div class="row-fluid">
                 <form class="form-inline center" action="" method="post">
                     <div class="span9 offset2">
                     <div class="title">
                         <input type="hidden" name="token" value="<?php echo ($token); ?>" />
-                        <h3>Sign in</h3>
+                        <h3>用户登录</h3>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="input-email"></label>
                         <div class="controls">
                             <div class="input-prepend">
                                 <span class="add-on"><i class="icon-user"></i></span>
-                                <input  value="<?php echo ($username); ?>" name="usernameoremail" class="email-input input-large" type="text" id="input-email" placeholder="Username or Email">
+                                <input  value="<?php echo ($username); ?>" name="usernameoremail" class="email-input input-large" type="text" id="input-email" placeholder="请输入用户名或邮箱">
                              </div>
                         </div>
                     </div>
@@ -56,9 +120,9 @@
                         <div class="controls">
                             <div class="input-prepend">
                             <span class="add-on"><i class="icon-lock"></i></span>
-                            <input  name="password" class="input-large" type="password" id="input-password" placeholder="Password">
+                            <input  name="password" class="input-large" type="password" id="input-password" placeholder="请输入密码">
                             </div>
-                            <p class="help-text-inline"><a href="">Forgot?</a></p>
+                            <p class="help-text-inline"><a href="">忘记密码?</a></p>
                         </div>
                     </div>
                     <?php if(($errors) > "3"): ?><div class="control-group">
@@ -82,14 +146,15 @@
 </noscript>
 -->
 <?php echo ($recaptcha); ?>
+                                <img src='Login:recaptcha' />
                             </div>
                         </div><?php endif; ?>
                     <div class="control-group">
                         <label class="control-label hide" for="btn-submit"></label>
                         <div class="controls">
-                            <button type="submit" class="submit btn btn-large"> Sign in </button>
+                            <button type="submit" class="submit btn btn-large"> 登录 </button>
                             <label class="checkbox remember offset1">
-                                <input type="checkbox"> Remember me
+                                <input type="checkbox"> 记住密码
                             </label>
                             
                         </div>
@@ -104,36 +169,20 @@
                 </p>
             </div> 
         </div>
-        <div class="span4 block well well-small border-radius6 border">
-            <div class="row-fluid">
-                    <div class="row-fluid inner-center">
-                        <h5></h5>
-                    </div> 
-                    <div class="row-fluid inner-center">
-                        <a class="btn btn-large" href="<?php echo U('Login/signup');?>">Create Your Account</a>
-                    </div> 
-                    <div class="row-fluid">
-                        <br />
-                    </div> 
-            </div>
-            <div class="row-fluid inner-center">
-               <script id='denglu_login_js' type='text/javascript' charset='utf-8'></script>
-<script type="text/javascript" charset="utf-8">
-   
-    $(function() {
-        var _dl_time = new Date().getTime();
-        var _dl_login = document.getElementById('denglu_login_js');
-        _dl_login.id = _dl_login.id + '_' + _dl_time;
-        _dl_login.src = 'http://open.denglu.cc/connect/logincode?appid=52707denh7xFHpBYtEUEhgnOk6zOi3&v=1.0.2&widget=1&styletype=1&size=250_181&asyn=true&time=' + _dl_time;
-    })();
-</script> 
-               <script id='denglu_login_js' type='text/javascript' charset='utf-8'></script>
-            </div>
-            <p class="mobile-helper" style="margin:0;line-height: 5px;">&nbsp;</p>
-        </div>
     </div>
 </div>
 </div>
+<div id="alert" class="row-fluid">
+    <div class="center alert message fade in hide">
+        <a class="dismiss close" data-dismiss="alert">×</a>
+        <label></label>
+    </div>
+</div>
+<?php if(!empty($msg)): ?><script type="text/javascript">
+		$(function(){
+			alert(<?php echo '"'.$msg.'"';$msg=null; ?>);
+		})
+	</script><?php endif; ?>
 
 </body>
 </html>

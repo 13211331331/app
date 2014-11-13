@@ -11,9 +11,7 @@ class LoginAction extends Action {
     		exit();
     	}
     	else if($this->isPost()){
-    	    if(!session('errors')){
-    	        session('errors',0);
-    	     }
+    		 session('errors',0);
 		    if(session('errors')<3 || $this->recaptcha_valiaute()) {	//如果为post请求并且错误尝试次数小于4,则无需验证；否则需要对验证码进行验证
 		    	$username=htmlentities($this->_post('usernameoremail'));
 		    	$password=htmlentities($this->_post('password'));
@@ -33,18 +31,12 @@ class LoginAction extends Action {
 					$M->add();
 
 					$this->msg='success!';
-		            redirect(U('Admin/index'));
+		            redirect(U('Index/index'));
 		            exit();
 		        }
 		        else{
-		            echo session('errors');
-		            echo $this->publickey;
-		        	if(session('errors')>2) {
-		        	    load("@.recaptchalib");
-		        	    $this->recaptcha = recaptcha_get_html($this->publickey, $error);
-		        	    print_r(  $this->recaptcha);
-		        	}
-		        	$this->msg = "用户名或者密码错误";
+		        	if(session('errors')>2) {$this->recaptcha = recaptcha_get_html($this->publickey, $error);}
+		        	$this->msg = "Wrong username or email and password combine.";
 		        }
 		    }
 		   
@@ -63,7 +55,6 @@ class LoginAction extends Action {
 		session('userid',null);
 		session('mediaID',null);
 		session('mediaUserID',null);
-		 session('errors',null);
         $this->redirect("index");
     }
 

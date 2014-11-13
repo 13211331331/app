@@ -2,7 +2,7 @@
 class AdminAction extends Action {
     public function index(){
         if(session('?username')){
-            $this->display('hero');
+            $this->display();
         }
         else{
             redirect(U('Login/Index'));
