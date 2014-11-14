@@ -1,5 +1,5 @@
 <?php
-class AdminAction extends CommonAction {
+class ProductAction extends CommonAction {
 
     public function index(){
         $this->display();
