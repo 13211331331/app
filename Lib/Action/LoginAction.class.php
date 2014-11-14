@@ -6,7 +6,7 @@ class LoginAction extends Action {
     		exit();
     	}
     	if($this->isGet()){	
-    		if(session('errors')>2)$this->show_recaptcha();					//如果为get请求并且错误尝试次数大于3,显示验证码
+    		//if(session('errors')>2)$this->show_recaptcha();					//如果为get请求并且错误尝试次数大于3,显示验证码
     		$this->display();
     		exit();
     	}
@@ -16,14 +16,12 @@ class LoginAction extends Action {
     	     }
 		    if(session('errors')<3 || $this->recaptcha_valiaute()) {	//如果为post请求并且错误尝试次数小于4,则无需验证；否则需要对验证码进行验证
 		    	$username=htmlentities($this->_post('usernameoremail'));
-		    	$password=htmlentities($this->_post('password'));
+		    	$password=trim(htmlentities($this->_post('password')));
 		    	$User = M('user');
 				$User->where("username='%s' or email='%s' ",$username,$username)->find();
 		        if(isset($User->password) && ($User->password===md5Encrypt($password))){
-		            
 		            session('username',$username);
 					session('userid',$User->id);
-
 					$M=M('log');
 					$M->update_user = session('userid');
 					$M->update_time = get_time();
@@ -35,15 +33,7 @@ class LoginAction extends Action {
 					$this->msg='success!';
 		            redirect(U('Admin/index'));
 		            exit();
-		        }
-		        else{
-		            echo session('errors');
-		            echo $this->publickey;
-		        	if(session('errors')>2) {
-		        	    load("@.recaptchalib");
-		        	    $this->recaptcha = recaptcha_get_html($this->publickey, $error);
-		        	    print_r(  $this->recaptcha);
-		        	}
+		        } else{
 		        	$this->msg = "用户名或者密码错误";
 		        }
 		    }
@@ -67,44 +57,23 @@ class LoginAction extends Action {
         $this->redirect("index");
     }
 
-    protected function show_recaptcha(){
-    	if(C('SHOW_RECAPTCHA')){
-    		$this->publickey  = C('RECAPTCHA_PUBLICKEY');
-    	}
-    	else{
-    		return;
-		}
-    	load("@.recaptchalib");
-		$this->recaptcha = recaptcha_get_html($this->publickey, $this->error);
-    }
+
 
     protected function recaptcha_valiaute(){
-    	if(C('SHOW_RECAPTCHA')){
-    		$this->publickey  = C('RECAPTCHA_PUBLICKEY');
-    		$this->privatekey = C('RECAPTCHA_PRIVATEKEY');
-    	}
-    	else{
-    		return true;
-		}
+       if(md5($this->_post('verify')) == $_SESSION['verify']){
+           return true;
+       }else{
+           $this->msg = "验证码错误";
+           $this->display();
+           exit();
+       }
+    }
 
-    	load("@.recaptchalib");
-    	$resp = null;
-		$error = null;
 
-		if (isset($_POST['recaptcha_response_field'])) {
-		    $resp = recaptcha_check_answer ($this->privatekey,
-		    	$_SERVER['REMOTE_ADDR'],
-		    	$_POST['recaptcha_challenge_field'],
-		    	$_POST['recaptcha_response_field']);
-
-		    if ($resp->is_valid) {
-		        return true;
-		    } else {
-		        $error = $resp->error;
-		    }
-		}
-		$this->recaptcha = recaptcha_get_html($this->publickey, $error);
-		return false;
+    public function verify() {
+        import ( "ORG.Util.Image" );//引入类文件
+       // Image::buildImageVerify($length,$mode,$type,$width,$height,$verifyName)
+        Image::buildImageVerify(4,1,'png',50,28,'verify');
     }
 
     public function signup(){
