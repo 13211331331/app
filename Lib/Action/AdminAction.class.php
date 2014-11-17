@@ -1,8 +1,9 @@
 <?php
-class AdminAction extends CommonAction {
+class AdminAction extends CheckAction {
 
     public function index(){
-        $this->display();
+        parent::checkLogin(); 
+    	$this->display();
     }
 
 }

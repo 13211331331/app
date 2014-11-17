@@ -1,0 +1,60 @@
+
+/**---for ie6--**/
+*html .nav a.hytera_index, *html .nav a.about_hytera, *html .nav a.products_center, *html .nav a.solutions, *html .nav a.technology_research, *html .nav a.marketing, *html .nav a.service_support, *html .nav a.investor {{
+float:left;
+}
+*html .nav a.hytera_index span, *html .nav a.about_hytera span, *html .nav a.products_center span, *html .nav a.solutions span, *html .nav a.technology_research span, *html .nav a.marketing span, *html .nav a.service_support span, *html .nav a.investor spann{float:left;}
+*html .menuitempanel{ top:40px;}
+*html .menucontentdiv { position: relative; z-index: 1009; padding: 0px 0px 0 30px;}
+*html .nav li a.hover {height:40px;}
+*html .menuitempanel div.clearfix{padding-top:20px;}
+*html .menuitempanel ul.list li.left ul{margin-right:10px;}
+*html .menuitempanel ul.list li.left ul.last{margin-right:0;}
+*html .menuitempanel ul.list li.last{margin-left:0;}
+*html .menuitempanel .trad{width:972px;}
+*html .menuitempanel .products_tab_wrap{width:972px;}
+
+*html .menuitempanel .products_tab{width:972px;height:337px;}
+*html .menuitempanel .products_tab #lib_tab1_sx .lib_menubox_sx{ height:337px; width:203px; background: url(tabbg.png) repeat;}
+*html .menuitempanel .products_tab #lib_tab1_sx .lib_target_sx{ width:10px; float:left; margin-top:0px;}
+*html .menuitempanel .products_tab #lib_tab1_sx .products_box{ float:left;}
+*html .menuitempanel .products_tab #lib_tab1_sx .lib_menubox_sx ul{position:absolute;top:15px;left:0px;}
+*html .menuitempanel .products_tab #lib_tab1_sx .lib_menubox_sx li{ height:25px; line-height:25px;}
+*html #menu .menuitempanel .products_tab_line{ width:182px; height:2px; background:url(hline.png) no-repeat; margin:0 auto; padding:0;}
+*html .lib_target_sx div{ width:10px; height:44px; background:none;}
+*html .lib_target_sx div.hover{ width:10px; height:44px; background:url(p24.gif) no-repeat center;}
+
+*html .language-box div.tag_select{ width:80px; padding-left:10px;}
+*html .language-box div.tag_select_hover{ width:80px;padding-left:10px;}
+*html .language-box div.tag_select_open{ padding-left:10px;}
+*html .language-box ul.tag_options{ clear:both; float:left; position:relative; margin-top:0px;}
+*html .search-box{ width:160px; height:25px;}
+*html #search-box-h{width:116px;padding-left:10px;}
+
+*html .features-content{ height:190px;}
+*html .jshowoff-2-slidelinks{ margin-top:-20px;}
+*html .jshowoff-2-prev{ margin-top:-127px; }
+*html .jshowoff-2-next{ margin-top:-127px; }
+
+*html #solution_nav li a{width:182px; height:38px; line-height:38px; border:#ccc 1px solid; border-top:none;}
+*html #solution_nav li ul a { padding-left:20px; width:182px; height:33px; line-height:33px;}
+*html .close_icon{ float:right; width:13px; height:13px; background:url(icons.gif) no-repeat 0 -475px; padding-right:10px; margin-top:12px;}
+*html .open_icon{ float:right; width:13px; height:8px; background:url(icons.gif) no-repeat 0 -461px;  padding-right:12px; margin-top:12px;}
+*html .pagerss a{ height:40px; line-height:40px; position:relative; top:12px;display:none;}
+*html .pagerss #rssimg{ position:relative; top:1px;display:none;}
+*html .isa_trigger a{ position:relative; top:15px;}
+*html pdf_download{ margin-top:0px;}
+*html .locfor_tab_menu li{ width:359px;}
+*html .locfor_tab_menu_b div{ width:359px; margin-top:-3px;}
+.locfor_tab_menu_b div.hover{}
+
+/*--for ie7-*/
+.language-box div.tag_select{ *width:80px ; *padding-left:10px  ;}
+.language-box div.tag_select_hover{ *width:80px; *padding-left:10px;}
+.language-box div.tag_select_open{ *padding-left:10px;}
+.language-box ul.tag_options{ *clear:both; *float:left; *position:relative; *margin-top:0px ;}
+.menuitempanel .products_tab #lib_tab1_sx .lib_menubox_sx li{ *height:35px; *line-height:25px;}
+#menu .menuitempanel .products_tab_line{ *width:182px; *height:2px; *margin:0 auto; }
+#search-box-h{*width:116px;padding-left:10px;}
+
+

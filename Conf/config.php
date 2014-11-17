@@ -17,8 +17,11 @@ return array(
 'TMPL_PARSE_STRING'  => array(
      '__PUBLIC__'=>__ROOT__.'/app/Public',
  ),
+ 'SESSION_OPTIONS'=> array(
+			'expire'=>'30'
+ ),
 
- 'RECAPTCHA_PUBLICKEY'=>"6LdPzNcSAAAAAD5xZltr8TYCO5i9T5hoJ6FZnWij",
+  'LAYOUT_ON' 		=> 	TRUE,		//
 
 );
 ?>

@@ -61,6 +61,12 @@
 <![endif]-->
 </head>
 <body>
+<script language="JavaScript">
+    function freshimg(){
+        var timenow = new Date().getTime();
+        document.getElementById('verifycode').src='<?php echo U('Login/verify');?>'+'?'+timenow;
+    }
+</script>
 <div class="container">
 <div class="wrapper">
     <div class="navbar navbar-fixed-top navbar-inverse">
@@ -93,7 +99,6 @@
         </div>
     </div>
 </div>
-
     <br>
     <br>
     <br>
@@ -102,63 +107,56 @@
             <div class="row-fluid">
                 <form class="form-inline center" action="" method="post">
                     <div class="span9 offset2">
-                    <div class="title">
-                        <input type="hidden" name="token" value="<?php echo ($token); ?>" />
-                        <h3>用户登录</h3>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="input-email"></label>
-                        <div class="controls">
-                            <div class="input-prepend">
-                                <span class="add-on"><i class="icon-user"></i></span>
-                                <input  value="<?php echo ($username); ?>" name="usernameoremail" class="email-input input-large" type="text" id="input-email" placeholder="请输入用户名或邮箱">
-                             </div>
+
+                        <div class="title">
+                            <input type="hidden" name="token" value="<?php echo ($token); ?>" />
+                            <h3>用户登录</h3>
                         </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="input-password"></label>
-                        <div class="controls">
-                            <div class="input-prepend">
-                            <span class="add-on"><i class="icon-lock"></i></span>
-                            <input  name="password" class="input-large" type="password" id="input-password" placeholder="请输入密码">
-                            </div>
-                            <p class="help-text-inline"><a href="">忘记密码?</a></p>
-                        </div>
-                    </div>
-                    <?php if(($errors) > "3"): ?><div class="control-group">
+
+                        <div class="control-group">
+                            <label class="control-label" for="input-email"></label>
                             <div class="controls">
-                                <script type="text/javascript">
- var RecaptchaOptions = {
-    theme : 'white'
- };
- </script>
-<!--
-<script type="text/javascript"
- src="http://www.google.com/recaptcha/api/challenge?k=6LdPzNcSAAAAAD5xZltr8TYCO5i9T5hoJ6FZnWij">
-</script>
-<noscript>
- <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LdPzNcSAAAAAD5xZltr8TYCO5i9T5hoJ6FZnWij"
-     height="300" width="500" frameborder="0"></iframe><br>
- <textarea name="recaptcha_challenge_field" rows="3" cols="40">
- </textarea>
- <input type="hidden" name="recaptcha_response_field"
-     value="manual_challenge">
-</noscript>
--->
-<?php echo ($recaptcha); ?>
-                                <img src='Login:recaptcha' />
+                                <div class="input-prepend">
+                                    <span class="add-on"><i class="icon-user"></i></span>
+                                    <input  value="<?php echo ($username); ?>" name="usernameoremail" class="email-input input-large" type="text" id="input-email" placeholder="请输入用户名或邮箱">
+                                 </div>
                             </div>
-                        </div><?php endif; ?>
-                    <div class="control-group">
-                        <label class="control-label hide" for="btn-submit"></label>
-                        <div class="controls">
-                            <button type="submit" class="submit btn btn-large"> 登录 </button>
-                            <label class="checkbox remember offset1">
-                                <input type="checkbox"> 记住密码
-                            </label>
-                            
                         </div>
-                    </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="input-password"></label>
+                            <div class="controls">
+                                <div class="input-prepend">
+                                <span class="add-on"><i class="icon-lock"></i></span>
+                                <input  name="password" class="input-large" type="password" id="input-password" placeholder="请输入密码">
+                                </div>
+                                <p class="help-text-inline"><a href="">忘记密码?</a></p>
+                            </div>
+                        </div>
+
+                        <div class="control-group"
+                            <?php if(session('errors') <3){ echo "style=\"display:none;\""; } ?>
+                            >
+                            <label class="control-label" for="verify"></label>
+                            <div class="controls">
+                                <div class="input-prepend">
+                                    <span class="add-on"><i class=" icon-check"></i></span>
+                                    <input  value="" name="verify" class=" input-mini" type="text" id="verify" placeholder="验证码">
+                                </div>
+                                &nbsp; &nbsp; &nbsp; <img id="verifycode" src="<?php echo U('Login/verify');?>" onclick="freshimg()" />
+                            </div>
+                        </div>
+
+
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="submit" class="submit btn btn-large"> 登录 </button>
+                                <label class="checkbox remember offset1">
+                                    <input type="checkbox"> 记住密码
+                                </label>
+
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>

@@ -1,8 +1,9 @@
 <?php
-class ProductAction extends CommonAction {
+class ProductAction extends CheckAction {
 
     public function index(){
-        $this->display();
+    	parent::checkLogin(); 
+    	$this->display();
     }
-
+       
 }

@@ -63,6 +63,7 @@ class LoginAction extends Action {
        if(md5($this->_post('verify')) == $_SESSION['verify']){
            return true;
        }else{
+           $this->username=htmlentities($this->_post('usernameoremail'));
            $this->msg = "验证码错误";
            $this->display();
            exit();
@@ -72,7 +73,6 @@ class LoginAction extends Action {
 
     public function verify() {
         import ( "ORG.Util.Image" );//引入类文件
-       // Image::buildImageVerify($length,$mode,$type,$width,$height,$verifyName)
         Image::buildImageVerify(4,1,'png',50,28,'verify');
     }
 
