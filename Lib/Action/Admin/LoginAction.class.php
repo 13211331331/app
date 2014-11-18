@@ -31,7 +31,7 @@ class LoginAction extends Action {
 					$M->add();
 
 					$this->msg='success!';
-		            redirect(U('Admin/index'));
+		            redirect(U('Index/index'));
 		            exit();
 		        } else{
 		        	$this->msg = "用户名或者密码错误";
