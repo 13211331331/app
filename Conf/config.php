@@ -7,7 +7,7 @@ return array(
 'DB_HOST'   		=> 	'localhost',// 服务器地址
 'DB_NAME'   		=> 	'xinjie', 	// 数据库名
 'DB_USER'   		=> 	'root', 	// 用户名
-'DB_PWD'    		=> 	'hanlin', 	// 密码
+'DB_PWD'    		=> 	'mysql', 	// 密码
 'DB_PORT'   		=> 	3306, 		// 端口
 'DB_PREFIX' 		=> 	'', 		// 数据库表前缀
 'DB_DEPLOY_TYPE'	=>	0,			// 数据库部署方式 0 集中式 1 分布式	0
@@ -22,6 +22,20 @@ return array(
  ),
 
   'LAYOUT_ON' 		=> 	TRUE,		//
+
+    //Group
+    'APP_GROUP_LIST' 	=> 	'Admin,Comm',	// 项目分组设定
+    'DEFAULT_GROUP'  	=> 	'Comm',	// 默认分组
+    'DEFAULT_THEME' 	=> 	'',
+
+    'EMPTY_MODULE'		=>	'Department,Role,Broadband,Broadband_cat,Passport,Parameters,Log,',	//允许通过EmptyAction处理的模块，注意以,结尾
+    'EMPTY_ACTION'		=>	'index,add,edit,save,delete,refer,view,operate,',//允许通过EmptyAction处理的Action，注意以,结尾
+
+    'LazyInc'			=>	'6',
+
+    'LOAD_EXT_CONFIG'=>'columns,query,pill',
+
+    'TMPL_SIRIP_SPACE'=>false,
 
 );
 ?>
