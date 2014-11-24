@@ -6,9 +6,9 @@
         <ul style="display: none;">
             <volist name="vo['chi']" id="vo1" empty="" >
                 <if condition="$i eq count($vo['chi'])">
-                    <li class="last"><a href="{$vo1['url']}">{$vo1['name']}</a></li>
+                    <li class="last"><a href="{$vo1['url']}" target="{$vo1['target']}">{$vo1['name']}</a></li>
                     <else />
-                    <li><a href="{$vo1['url']}">{$vo1['name']}</a></li>
+                    <li><a href="{$vo1['url']}"  target="{$vo1['target']}">{$vo1['name']}</a></li>
                 </if>
             </volist>
         </ul>
