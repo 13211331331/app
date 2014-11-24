@@ -5,11 +5,12 @@
     <title>无标题文档</title>
 </head>
 
-<frameset rows="35,*" cols="*" framespacing="1" frameborder="yes" border="1" bordercolor="#b8b8b8">
-    <frame src="__PUBLIC__/page/UntitledFrame-2.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
-    <frameset cols="180,*" framespacing="1" frameborder="yes" border="1" bordercolor="#b8b8b8">
-        <frame src="__PUBLIC__/page/UntitledFrame-3.html" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
-        <frame src="__PUBLIC__/page/Untitled-1.html" name="mainFrame" id="mainFrame" title="mainFrame" />
+<frameset rows="20,*" cols="*" framespacing="1" frameborder="no" border="0">
+    <frame src="__PUBLIC__/page/top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+    <frameset cols="180,20,*" framespacing="1" frameborder="no" border="0">
+        <frame src="{:U('Index/menu')}" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+        <frame src="__PUBLIC__/page/leftmiddle.html" name="leftMiddleFrame" scrolling="No" noresize="noresize" id="leftMiddleFrame" title="leftMiddleFrame" />
+        <frame src="__PUBLIC__/page/main.html" name="mainFrame" id="mainFrame" title="mainFrame" />
     </frameset>
 </frameset>
 <noframes><body>

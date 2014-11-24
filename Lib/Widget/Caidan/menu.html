@@ -1,0 +1,16 @@
+{__NOLAYOUT__}
+<volist name="data" id="vo" empty="" >
+  <li class="expandable">
+        <div class="hitarea expandable-hitarea"></div>
+        <a href="#">{$vo['name']}</a>
+        <ul style="display: none;">
+            <volist name="vo['chi']" id="vo1" empty="" >
+                <if condition="$i eq count($vo['chi'])">
+                    <li class="last"><a href="{$vo1['url']}">{$vo1['name']}</a></li>
+                    <else />
+                    <li><a href="{$vo1['url']}">{$vo1['name']}</a></li>
+                </if>
+            </volist>
+        </ul>
+    </li>
+</volist>

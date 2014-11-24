@@ -6,4 +6,9 @@ class IndexAction extends  CheckAction {
         $this->display();
     }
 
+    public function menu(){
+        parent::checkLogin();
+        $this->display();
+    }
+
 }
